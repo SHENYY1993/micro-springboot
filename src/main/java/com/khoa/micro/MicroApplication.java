@@ -1,7 +1,6 @@
 package com.khoa.micro;
 
 import com.alibaba.fastjson.JSONObject;
-import org.example.App;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -26,7 +25,7 @@ public class MicroApplication {
     @GetMapping("/world")
     public String world() {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("key",App.getMessage());
+        jsonObject.put("key","World is changing");
         return jsonObject.get("key").toString();
     }
 }
